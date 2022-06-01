@@ -44,4 +44,23 @@ console.log(myCat22.name);
 myCat.miau();
 myCat22.miau('ja ja');
 
+//new
+const m = new Map();
+
+m.set('cat1', myCat);
+m.set('cat2', myCat22);
+console.table(m);
+console.table(m.get('cat2'));
+
+//map'e nebutinai turi buti stingai
+const h = new Map();
+
+h.set(myCat22, myCat);
+h.set(myCat, myCat22);
+h.set('aaaa', '--------------------------');
+console.table(h);
+console.table(h.get(myCat22));
+console.table(h.get(myCat));
+console.table(h.get('aaaa'));
+
 
