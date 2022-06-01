@@ -27,13 +27,13 @@ console.log(a.tail());
 
 //kepam class
 class Cat {
-    constructor(n) {
+    constructor(n) { //'Bevardis'
         console.log('Naujas katinas');
-        this.name = n;
+        this.name = n; //?? 'Bevardis'
     }
     //metodas
-    miau = () => {
-        console.log(this.name + ' miau!')
+    miau = (m = '') => {
+        console.log(this.name + ' miau! ' + m)
     }
 }
 
@@ -42,6 +42,6 @@ const myCat22 = new Cat('Mikis');
 console.log(myCat.name);
 console.log(myCat22.name);
 myCat.miau();
-myCat22.miau();
+myCat22.miau('ja ja');
 
 
