@@ -56,7 +56,7 @@ pinigai.skaiciuoti();
 pinigai.monetos();
 pinigai.banknotai();
 
-//8
+//8 +STATIC
  class Stikline {
      static gerimukas = 'pepsi';
      static registras = [];
@@ -73,7 +73,7 @@ pinigai.banknotai();
      static visosStiklines (stikline) {
          this.registras.push(stikline);
      }
-     
+
      constructor(turis) {
          this.turis = turis;
          this.kiekis = 0;
