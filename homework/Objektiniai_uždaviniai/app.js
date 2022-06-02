@@ -96,6 +96,7 @@ pinigai.banknotai();
 const s1 = new Stikline(200);
 const s2 = Stikline.naujaStikline(150);
 const s3 = new Stikline(100);
+const s4 = new Stikline(800);
 console.log(s1);
 console.log(Stikline.gerimukas);
 Stikline.whatType();
