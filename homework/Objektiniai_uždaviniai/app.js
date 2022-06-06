@@ -1,5 +1,5 @@
 //1
-class Kibiras1 {
+class Kibiras {
     constructor() {
         this.akmenuKiekis = 0;
     }
@@ -14,7 +14,7 @@ class Kibiras1 {
     }
 }
 
-const kibiras = new Kibiras1();
+const kibiras = new Kibiras();
 kibiras.prideti1Akmeni();
 kibiras.pridetiDaugAkmenu();
 kibiras.kiekPririnktaAkmenu();
@@ -55,6 +55,48 @@ pinigai.ideti(3);
 pinigai.skaiciuoti();
 pinigai.monetos();
 pinigai.banknotai();
+
+console.log(`-----------------------`)
+//7 (STATIC)
+class Kibiras1{
+    static visiAkmenys = 0;
+
+    static akmenuSkaiciusVisuoseKibiruose() {
+        console.log(`Pririnkta viso: ${this.visiAkmenys} akmenų`);
+    }
+
+    static bendrasAkmenuSkaicius(akmenuSkaicius) {
+        this.visiAkmenys += akmenuSkaicius;
+    }
+
+    constructor() {
+        this.akmenuKiekis = 0;
+    }
+
+    prideti1Akmeni() {
+        this.akmenuKiekis++;
+        this.constructor.bendrasAkmenuSkaicius(1);
+    }
+
+    pridetiDaugAkmenu(kiekis) {
+        this.akmenuKiekis += kiekis;
+        this.constructor.bendrasAkmenuSkaicius(kiekis);
+    }
+
+}
+
+const k1 = new Kibiras1();
+const k2 = new Kibiras1();
+const k3 = new Kibiras1();
+
+k1.pridetiDaugAkmenu(10);
+k2.prideti1Akmeni();
+k3.pridetiDaugAkmenu(9);
+k2.prideti1Akmeni();
+k2.prideti1Akmeni();
+
+Kibiras1.akmenuSkaiciusVisuoseKibiruose();
+console.log(`-----------------------`)
 
 //8 +STATIC
  class Stikline {
